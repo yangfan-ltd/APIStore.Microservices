@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/microservice_core/pom.xml" />
+        <option value="$PROJECT_DIR$/../microservice_core/microservice_core/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-apigateway/pom.xml" />
+        <option value="$PROJECT_DIR$/../microservice-core/microservice-core/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
