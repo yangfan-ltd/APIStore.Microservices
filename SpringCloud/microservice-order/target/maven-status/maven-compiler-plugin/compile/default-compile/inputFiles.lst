@@ -1,0 +1,12 @@
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\properties\ItemProperties.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\fallback\ItemServiceFallback.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\runner\OrderApp.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\entity\Order.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\test\ItemServiceTest.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\controller\OrderController.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\feign\ItemFeignClient.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\service\OrderService.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\entity\OrderDetail.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\entity\Item.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\service\ItemService.java
+C:\iWork\APIStore.Microservices\SpringCloud\microservice-order\src\main\java\com\zpc\order\properties\OrderProperties.java

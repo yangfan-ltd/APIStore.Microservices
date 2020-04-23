@@ -1,0 +1,14 @@
+http://127.0.0.1:8081/item/7
+
+http://127.0.0.1:7788/microservice-test.properties
+spring Eureka
+http://127.0.0.1:8100/
+http://127.0.0.1:9100/
+
+item:
+http://127.0.0.1:8081/item/7
+http://127.0.0.1:9091/item/7
+
+order:
+http://127.0.0.1:8082/order/20181030001
+http://127.0.0.1:8082/order2/20181030001
