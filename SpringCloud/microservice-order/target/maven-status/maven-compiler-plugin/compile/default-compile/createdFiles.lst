@@ -1,0 +1,12 @@
+com\zpc\order\service\OrderService.class
+com\zpc\test\ItemServiceTest.class
+com\zpc\order\properties\OrderProperties.class
+com\zpc\order\fallback\ItemServiceFallback.class
+com\zpc\order\runner\OrderApp.class
+com\zpc\order\entity\Order.class
+com\zpc\order\feign\ItemFeignClient.class
+com\zpc\order\properties\ItemProperties.class
+com\zpc\order\controller\OrderController.class
+com\zpc\order\entity\OrderDetail.class
+com\zpc\order\service\ItemService.class
+com\zpc\order\entity\Item.class

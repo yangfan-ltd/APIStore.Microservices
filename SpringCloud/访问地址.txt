@@ -1,14 +1,22 @@
-http://127.0.0.1:8081/item/7
-
-http://127.0.0.1:7788/microservice-test.properties
-spring Eureka
+spring Eureka 服务发现:
 http://127.0.0.1:8100/
 http://127.0.0.1:9100/
 
-item:
-http://127.0.0.1:8081/item/7
-http://127.0.0.1:9091/item/7
+Zuul微服务网关:
+http://127.0.0.1:8086/microservice-item/item/7
+ 
 
-order:
+microservice-config-server配置管理:
+http://127.0.0.1:7788/microservice-test.properties
+
+
+microservice-item:
+http://127.0.0.1:8081/item/7
+http://127.0.0.1:8091/item/7
+
+microservice-order:
 http://127.0.0.1:8082/order/20181030001
 http://127.0.0.1:8082/order2/20181030001
+
+
+netstat -ano|findstr  8082

@@ -11,16 +11,7 @@ eureka:
     prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}###${server.port} #指定实例id
-#spring:
-#  cloud:
-#    config:
-#      name: microservice #对应配置中心的应用名称，默认是本应用名，即spring.application.name,该名称要和git中的配置一致
-#      uri: http://127.0.0.1:7788/
-#      profile: dev #对应配置服务中的{profile}
-#      label: master #对应的分支
-#      discovery:
-#        enabled: true #启用发现服务功能
-#        service-id: microservice-config-server #指定配置中心工程的名称
+
 
 spring:
   cloud:
