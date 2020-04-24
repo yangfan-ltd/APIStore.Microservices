@@ -1,6 +1,6 @@
 package com.zpc.test;
 
-import com.zpc.order.runner.OrderApp;
+import com.zpc.order.OrderApp;
 import com.zpc.order.service.ItemService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

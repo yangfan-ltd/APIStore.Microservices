@@ -46,13 +46,6 @@ public class ItemService {
 //        String url=serviceInstance.getHost()+":"+serviceInstance.getPort();
 //        return this.restTemplate.getForObject("http://"+url+"/item/"+id,Item.class);
 
-//        String itemUrl = "http://app-item/item/{id}";
-//
-////      return this.restTemplate.getForObject(orderProperties.getItem().getUrl()
-////                + id, Item.class);
-//        Item result = restTemplate.getForObject(itemUrl, Item.class,id);
-//        System.out.println("该订单系统调用商品服务,result:"+result);
-//        return result;
     }
 
     /**
@@ -62,7 +55,7 @@ public class ItemService {
      * @param id
      * @return
      */
-    //@HystrixCommand(fallbackMethod = "queryItemByIdFallbackMethod")
+    @HystrixCommand(fallbackMethod = "queryItemByIdFallbackMethod")
     public Item queryItemById3(Long id) {
         Item result = itemFeignClient.queryItemById(id);
         System.out.println("===========HystrixCommand queryItemById-线程池名称：" + Thread.currentThread().getName() + "订单系统调用商品服务,result:" + result);

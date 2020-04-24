@@ -17,6 +17,8 @@ public class OrderController {
         return this.orderService.queryOrderById(orderId);
     }
 
+
+    //含hystrix熔断断路器
     @GetMapping(value = "order2/{orderId}")
     public Order queryOrderById2(@PathVariable("orderId") String orderId){
         return this.orderService.queryOrderByIdx(orderId);

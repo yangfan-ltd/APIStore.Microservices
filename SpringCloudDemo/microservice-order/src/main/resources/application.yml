@@ -1,12 +1,15 @@
 server:
   port: 8082 #服务端口
+
 myspcloud:
   item:
     url: http://127.0.0.1:8081/item/
+
 ###起个名字作为服务名称(该服务注册到eureka注册中心的名称，比如订单服务)
 spring:
   application:
     name: app-order
+
 ###服务注册到eureka注册中心的地址
 eureka:
   client:
@@ -22,9 +25,11 @@ eureka:
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}###${server.port} #指定实例id
 
-app-item:
-  ribbon:
-    NFLoadBalanceRuleClassName: com.netflix.loadbalancer.RandomRule
+
+#app-item:
+#  ##自定义的负载均衡策略类
+#  ribbon:
+#    NFLoadBalanceRuleClassName: com.netflix.loadbalancer.RandomRule
 
 #开启hystrix断路器
 feign:
