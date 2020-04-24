@@ -9,6 +9,9 @@ timeout /T 20 /NOBREAK
 start java -Dloader.path="C:/iWork/APIStore.Microservices/SpringCloud/microsrvice-api-gateway/microsrvice-api-gateway-lib/" -jar -Dserver.port=8086  C:/iWork/APIStore.Microservices/SpringCloud/microsrvice-api-gateway/target/microsrvice-api-gateway.jar
 @echo off
 timeout /T 20 /NOBREAK
+start java -Dloader.path="C:/iWork/APIStore.Microservices/SpringCloud/microsrvice-api-gateway/microsrvice-api-gateway-lib/" -jar -Dserver.port=8087  C:/iWork/APIStore.Microservices/SpringCloud/microsrvice-api-gateway/target/microsrvice-api-gateway.jar
+@echo off
+timeout /T 20 /NOBREAK
 start java -Dloader.path="C:/iWork/APIStore.Microservices/SpringCloud/microservice-config-server/microservice-config-server-lib/" -jar -Dserver.port=7788  C:/iWork/APIStore.Microservices/SpringCloud/microservice-config-server/target/microservice-config-server.jar
 @echo off
 timeout /T 20 /NOBREAK
