@@ -1,5 +1,0 @@
-com\zpc\item\service\ItemService.class
-com\zpc\item\config\JdbcConfigBean.class
-com\zpc\item\runner\ItemApp.class
-com\zpc\item\controller\ItemController.class
-com\zpc\item\entity\Item.class
