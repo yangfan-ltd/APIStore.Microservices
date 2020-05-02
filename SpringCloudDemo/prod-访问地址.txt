@@ -1,0 +1,62 @@
+spring Eureka 服务发现:
+http://springcloud.yunmishu365.com:8100/
+http://springcloud.yunmishu365.com:9100/ 
+
+http://39.100.212.7:8100/
+http://39.100.212.7:9100/ 
+
+microservice-config-server配置管理:
+http://springcloud.yunmishu365.com:7788/microservice-test.properties
+http://springcloud.yunmishu365.com:7788/actuator/refresh
+http://springcloud.yunmishu365.com/item-service/testconfig?token=1
+http://springcloud.yunmishu365.com:7788/service-zuul-dev.yml
+
+http://39.100.212.7:7788/microservice-test.properties
+http://39.100.212.7:7788/actuator/refresh            (有问题)
+http://39.100.212.7/item-service/testconfig?token=1
+http://39.100.212.7:7788/service-zuul-dev.yml
+
+microservice-item:
+http://springcloud.yunmishu365.com:8081/item/7
+http://springcloud.yunmishu365.com:8091/item/7
+http://springcloud.yunmishu365.com:8081/testconfig
+//http://springcloud.yunmishu365.com:8011/item/7
+//http://springcloud.yunmishu365.com:8021/item/7
+
+http://39.100.212.7:8081/item/7
+http://39.100.212.7:8091/item/7
+http://39.100.212.7:8081/testconfig
+
+microservice-order:
+http://springcloud.yunmishu365.com:8082/order/20181030001
+http://springcloud.yunmishu365.com:8092/order2/20181030001
+//http://springcloud.yunmishu365.com:8012/order/20181030001
+//http://springcloud.yunmishu365.com:8022/order2/20181030001
+
+Zuul微服务网关:
+http://springcloud.yunmishu365.com:8086/item-service/item/7?token=1
+http://springcloud.yunmishu365.com:8086/item-service/testconfig?token=1
+http://springcloud.yunmishu365.com:8087/order-service/order/20181030001?token=1  (有问题)
+http://springcloud.yunmishu365.com:8087/order-service/order2/20181030001?token=1    (含容错)(有问题)
+http://springcloud.yunmishu365.com:8086/config
+
+nginx:
+http://springcloud.yunmishu365.com/order-service/order/20181030001?token=1
+http://springcloud.yunmishu365.com/order-service/order2/20181030001?token=1
+http://springcloud.yunmishu365.com/item-service/item/7?token=1
+http://springcloud.yunmishu365.com/item-service/testconfig?token=1
+http://springcloud.yunmishu365.com/config
+
+http://springcloud.yunmishu365.com/swagger-ui.html?token=1
+
+
+
+netstat -ano|findstr  8082
+ps -x列举进程
+
+如下例所示：
+　　$ ps -e -o 'pid,comm,args,pcpu,rsz,vsz,stime,user,uid'  其中rsz是是实际内存
+　　$ ps -e -o 'pid,comm,args,pcpu,rsz,vsz,stime,user,uid' | grep oracle |  sort -nrk5
+　　其中rsz为实际内存，上例实现按内存排序，由大到小
+
+

@@ -1,0 +1,66 @@
+﻿###服务注册到eureka注册中心的地址
+eureka:
+  instance:
+    #注册中心地址
+    #hostname: 127.0.0.1
+    #hostname: 39.98.46.129
+    hostname: 39.100.212.7
+    prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
+    ip-address: ${eureka.instance.hostname}
+    instance-id: ${spring.application.name}###${server.port} #指定实例id
+  client:
+    service-url:
+      #defaultZone: http://zpc:123456@39.98.46.129:8100/eureka/,http://zpc:123456@39.98.46.129:9100/eureka/
+      #defaultZone: http://zpc:123456@127.0.0.1:8100/eureka/,http://zpc:123456@127.0.0.1:9100/eureka/
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8100/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:9100/eureka/
+    ###因为该应用为服务提供者，是eureka的一个客户端，需要注册到注册中心
+    register-with-eureka: true
+    ###是否需要从eureka上检索服务
+    fetch-registry: true
+    registry-fetch-interval-seconds: 5 # 默认为30秒
+
+
+server:
+  port: 8087 #服务端口
+spring:
+  application:
+    name: app-zuul-gateway #指定服务名
+  security:
+    user: #配置用户的账号信息
+      name: zpc
+      password: 123456
+
+  cloud:
+    config:
+      name: service-zuul #对应配置中心的应用名称，默认是本应用名，即spring.application.name,该名称要和git中的配置一致
+      #uri: http://127.0.0.1:7788/
+      profile: dev #对应配置服务中的{profile}
+      label: master #对应的分支
+      discovery:
+        enabled: true #启用发现服务功能
+        service-id: microservice-config-server #指定配置中心工程的名称
+
+#在git服务器上创建配置文件service-zuul-dev.yml，注释掉网关工程yml文件中的zuul配置，把配置拷到service-zuul-dev.yml中。
+#API网关
+zuul:
+  #使用'*'可忽略所有服务,只代理下述配置的微服务
+  #ignored-services:  '*'
+  routes: #定义服务转发规则,下述可最后优化成使用使用正则表达式指定路由规则
+    item-service: #item-service 这个名字任意取的
+      path: /item-service/** #配置请求URL的请求规则
+      #url: http://127.0.0.1:8081 #真正的微服务地址,path匹配的请求都转发到这里
+      serviceid: app-item
+    order-service: #名字尽量和业务系统相关
+      path: /order-service/** #匹配order-service的请求app-order服务
+      serviceid: app-order
+
+
+
+
+
+#开启所有端点,即开启所有监控接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include:  "*"

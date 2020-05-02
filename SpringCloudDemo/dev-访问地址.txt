@@ -1,0 +1,38 @@
+spring Eureka 服务发现:
+http://127.0.0.1:8100/
+http://127.0.0.1:9100/ 
+
+microservice-config-server配置管理:
+http://127.0.0.1:7788/microservice-test.properties
+http://127.0.0.1:7788/actuator/refresh
+http://www.zpc.com/app-item/testconfig?token=1
+http://127.0.0.1:7788/service-zuul-dev.yml
+
+microservice-item:
+http://127.0.0.1:8081/item/7
+http://127.0.0.1:8091/item/7
+http://127.0.0.1:8081/testconfig
+//http://127.0.0.1:8011/item/7
+//http://127.0.0.1:8021/item/7
+
+microservice-order:
+http://127.0.0.1:8082/order/20181030001
+http://127.0.0.1:8092/order2/20181030001
+//http://127.0.0.1:8012/order/20181030001
+//http://127.0.0.1:8022/order2/20181030001
+
+Zuul微服务网关:
+http://127.0.0.1:8087/app-order/order/20181030001?token=1
+http://127.0.0.1:8087/app-order/order2/20181030001?token=1    (含容错)
+http://127.0.0.1:8086/app-item/item/7?token=1
+http://127.0.0.1:8086/app-item/testconfig?token=1
+http://127.0.0.1:8086/config
+
+nginx:
+http://www.zpc.com/app-order/order/20181030001?token=1
+http://www.zpc.com/app-order/order2/20181030001?token=1
+http://www.zpc.com/app-item/item/7?token=1
+http://www.zpc.com/app-item/testconfig?token=1
+http://www.zpc.com/config?token=1
+
+netstat -ano|findstr  8082

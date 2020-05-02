@@ -27,12 +27,25 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
-        <!--整合配置中心-->
+
+        <!--整合配置中心cloud-config-server-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
+
+        <!--整合eureka客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
     </dependencies>
+
+
+
+
+
 <!--    <build>-->
 <!--        <finalName>${project.artifactId}</finalName>-->
 <!--        <plugins>-->
